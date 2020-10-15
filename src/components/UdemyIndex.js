@@ -1,9 +1,7 @@
 import React from 'react';
-
-import SeasonDisplay from './components/SeasonDisplay';
-import Spinner from './components/Spinner';
-
-
+import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 class App extends React.Component {
   state = { lat: null, errorMessage: '' };
@@ -32,4 +30,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+ReactDOM.render(<App />, document.querySelector('#root'));
